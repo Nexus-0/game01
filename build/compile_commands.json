@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/Users/liwenchao/Downloads/game01/build",
+  "command": "/usr/bin/clang++  -isystem /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.4/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.1/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wall -Wextra -Wpedantic -o CMakeFiles/game01-Darwin.dir/src/main.cpp.o -c /Users/liwenchao/Downloads/game01/src/main.cpp",
+  "file": "/Users/liwenchao/Downloads/game01/src/main.cpp",
+  "output": "CMakeFiles/game01-Darwin.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/liwenchao/Downloads/game01/build",
+  "command": "/usr/bin/clang++  -isystem /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.4/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.1/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wall -Wextra -Wpedantic -o CMakeFiles/game01-Darwin.dir/src/Game.cpp.o -c /Users/liwenchao/Downloads/game01/src/Game.cpp",
+  "file": "/Users/liwenchao/Downloads/game01/src/Game.cpp",
+  "output": "CMakeFiles/game01-Darwin.dir/src/Game.cpp.o"
+},
+{
+  "directory": "/Users/liwenchao/Downloads/game01/build",
+  "command": "/usr/bin/clang++  -isystem /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.4/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.1/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wall -Wextra -Wpedantic -o CMakeFiles/game01-Darwin.dir/src/scene.cpp.o -c /Users/liwenchao/Downloads/game01/src/scene.cpp",
+  "file": "/Users/liwenchao/Downloads/game01/src/scene.cpp",
+  "output": "CMakeFiles/game01-Darwin.dir/src/scene.cpp.o"
+},
+{
+  "directory": "/Users/liwenchao/Downloads/game01/build",
+  "command": "/usr/bin/clang++  -isystem /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.4/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.1/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wall -Wextra -Wpedantic -o CMakeFiles/game01-Darwin.dir/src/scenetitle.cpp.o -c /Users/liwenchao/Downloads/game01/src/scenetitle.cpp",
+  "file": "/Users/liwenchao/Downloads/game01/src/scenetitle.cpp",
+  "output": "CMakeFiles/game01-Darwin.dir/src/scenetitle.cpp.o"
+},
+{
+  "directory": "/Users/liwenchao/Downloads/game01/build",
+  "command": "/usr/bin/clang++  -isystem /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.4/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.1/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wall -Wextra -Wpedantic -o CMakeFiles/game01-Darwin.dir/src/scenemain.cpp.o -c /Users/liwenchao/Downloads/game01/src/scenemain.cpp",
+  "file": "/Users/liwenchao/Downloads/game01/src/scenemain.cpp",
+  "output": "CMakeFiles/game01-Darwin.dir/src/scenemain.cpp.o"
+},
+{
+  "directory": "/Users/liwenchao/Downloads/game01/build",
+  "command": "/usr/bin/clang++  -isystem /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_image/2.8.4/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_mixer/2.8.1/include/SDL2 -isystem /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2 -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk -Wall -Wextra -Wpedantic -o CMakeFiles/game01-Darwin.dir/src/sceneend.cpp.o -c /Users/liwenchao/Downloads/game01/src/sceneend.cpp",
+  "file": "/Users/liwenchao/Downloads/game01/src/sceneend.cpp",
+  "output": "CMakeFiles/game01-Darwin.dir/src/sceneend.cpp.o"
+}
+]

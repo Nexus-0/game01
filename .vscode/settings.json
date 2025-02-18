@@ -1,0 +1,18 @@
+{
+    "files.associations": {
+        "*.vue": "vue",
+        "iostream": "cpp",
+        "__node_handle": "cpp",
+        "new": "cpp",
+        "__split_buffer": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "__hash_table": "cpp",
+        "__tree": "cpp",
+        "ios": "cpp",
+        "map": "cpp",
+        "unordered_map": "cpp"
+    }
+}

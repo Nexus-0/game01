@@ -1,0 +1,3 @@
+/Users/liwenchao/Downloads/game01/build/CMakeFiles/game01-Darwin.dir
+/Users/liwenchao/Downloads/game01/build/CMakeFiles/edit_cache.dir
+/Users/liwenchao/Downloads/game01/build/CMakeFiles/rebuild_cache.dir
