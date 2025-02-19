@@ -278,7 +278,7 @@ void SceneMain::keybordControl(float deltaTime)
         player1.position.y = game.getWindowHeight() - player1.height;
    }
    //射击控制
-   if (keyboardState[SDL_SCANCODE_KP_1])
+   if (keyboardState[SDL_SCANCODE_J])
    {
     auto currentTime = SDL_GetTicks();
     if(currentTime - player1.lastShootTime > player1.cooldown){
