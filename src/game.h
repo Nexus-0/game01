@@ -28,7 +28,8 @@ public:
     void update(float deltaTime);
     void render();
     //渲染函数文字
-    void renderTextCentered(std::string text,float posY,  bool isTitle);
+    SDL_Point renderTextCentered(std::string text,float posY,  bool isTitle);
+    void renderTextPos(std::string text, float posX, float posY, bool isTitle);
     //setters
     void setFinalScore(int score){finalScore = score;};
 

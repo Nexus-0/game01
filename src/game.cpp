@@ -98,7 +98,7 @@ void Game::init()
         isRunning = false;
     }
     //初始化背景卷轴
-    nearSight.texture = IMG_LoadTexture(renderer, "assets/image/Stars-A.png");
+    nearSight.texture = IMG_LoadTexture(renderer, "../../assets/image/Stars-A.png");
     if(nearSight.texture == nullptr){
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL_Init Error: %s\n", SDL_GetError());
         isRunning = false;
@@ -107,7 +107,7 @@ void Game::init()
     nearSight.height /=2;
     nearSight.width /=2;
 
-    farSight.texture = IMG_LoadTexture(renderer, "assets/image/Stars-B.png");
+    farSight.texture = IMG_LoadTexture(renderer, "../../assets/image/Stars-B.png");
     if(farSight.texture == nullptr){
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL_Init Error: %s\n", SDL_GetError());
         isRunning = false;  
@@ -119,8 +119,8 @@ void Game::init()
    
 
     //载入字体  
-    titleFont = TTF_OpenFont("assets/font/VonwaonBitmap-16px.ttf", 64);
-    textFont = TTF_OpenFont("assets/font/VonwaonBitmap-16px.ttf", 32);
+    titleFont = TTF_OpenFont("../../assets/font/VonwaonBitmap-16px.ttf", 64);
+    textFont = TTF_OpenFont("../../assets/font/VonwaonBitmap-16px.ttf", 32);
     if(titleFont == nullptr || textFont == nullptr){
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL_Init Error: %s\n", SDL_GetError());
         isRunning = false;
@@ -199,7 +199,7 @@ void Game::render()
 
 }
 
-void Game::renderTextCentered(std::string text, float posY, bool isTitle)
+SDL_Point Game::renderTextCentered(std::string text, float posY, bool isTitle)
 {
     SDL_Color color = {255, 255, 255, 255};
     SDL_Surface *textSurface;
@@ -215,9 +215,29 @@ void Game::renderTextCentered(std::string text, float posY, bool isTitle)
                         textSurface->w,
                         textSurface->h};
    
-    SDL_RenderCopy(getRenderer(), textTexture, NULL, &textRect);
+    SDL_RenderCopy(getRenderer(), textTexture, NULL, &textRect); 
     SDL_DestroyTexture(textTexture);
     SDL_FreeSurface(textSurface);
+    return{textRect.x+textRect.w,y};
+}
+
+void Game::renderTextPos(std::string text, float posX, float posY, bool isTitle)
+{   
+    SDL_Color color = {255, 255, 255, 255};
+    SDL_Surface *textSurface;
+    if(isTitle){
+        textSurface = TTF_RenderUTF8_Solid(titleFont, text.c_str(), color);
+    }else{
+        textSurface = TTF_RenderUTF8_Solid(textFont, text.c_str(), color);
+    }
+    SDL_Texture* textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
+    SDL_Rect textRect = {static_cast<int>(posX),
+                        static_cast<int>(posY),
+                        textSurface->w,
+                        textSurface->h};    
+    SDL_RenderCopy(getRenderer(), textTexture, NULL, &textRect); 
+    SDL_DestroyTexture(textTexture);
+    SDL_FreeSurface(textSurface);   
 }
 
 void Game::backgroundUpdate(float deltaTime)
