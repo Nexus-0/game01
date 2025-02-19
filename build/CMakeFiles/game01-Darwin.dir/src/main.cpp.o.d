@@ -1,5 +1,5 @@
 CMakeFiles/game01-Darwin.dir/src/main.cpp.o: \
-  /Users/liwenchao/Downloads/game01/src/main.cpp \
+  /Users/liwenchao/Documents/game01/src/main.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__assert \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__assertion_handler \
@@ -1020,8 +1020,8 @@ CMakeFiles/game01-Darwin.dir/src/main.cpp.o: \
   /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2/SDL_locale.h \
   /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2/SDL_misc.h \
   /opt/homebrew/Cellar/sdl2_image/2.8.4/include/SDL2/SDL_image.h \
-  /opt/homebrew/Cellar/sdl2_mixer/2.8.1/include/SDL2/SDL_mixer.h \
+  /opt/homebrew/Cellar/sdl2_mixer/2.8.0/include/SDL2/SDL_mixer.h \
   /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2/SDL_ttf.h \
-  /Users/liwenchao/Downloads/game01/src/game.h \
-  /Users/liwenchao/Downloads/game01/src/scene.h \
-  /Users/liwenchao/Downloads/game01/src/object.h
+  /Users/liwenchao/Documents/game01/src/game.h \
+  /Users/liwenchao/Documents/game01/src/scene.h \
+  /Users/liwenchao/Documents/game01/src/object.h

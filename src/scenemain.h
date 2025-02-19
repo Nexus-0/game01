@@ -28,6 +28,7 @@ private:
     SDL_Texture* uiHealth;
     TTF_Font* scoreFont;
     int score = 0;
+    float timer = 0.0f;
 
     bool isAlive = true;
     std::mt19937 gen;
@@ -61,6 +62,7 @@ private:
     void updatePlayerProjectile(float deltaTime);
     void keybordControl(float deltaTime);
     void spawnEnemy();
+    void changeSceneDelayed(float deltaTime,float delay);
 
     void playerGetItem(Item *item);
     void shootControl();

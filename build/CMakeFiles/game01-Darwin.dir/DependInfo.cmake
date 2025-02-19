@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/liwenchao/Downloads/game01/src/Game.cpp" "CMakeFiles/game01-Darwin.dir/src/Game.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/Game.cpp.o.d"
-  "/Users/liwenchao/Downloads/game01/src/main.cpp" "CMakeFiles/game01-Darwin.dir/src/main.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/main.cpp.o.d"
-  "/Users/liwenchao/Downloads/game01/src/scene.cpp" "CMakeFiles/game01-Darwin.dir/src/scene.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/scene.cpp.o.d"
-  "/Users/liwenchao/Downloads/game01/src/sceneend.cpp" "CMakeFiles/game01-Darwin.dir/src/sceneend.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/sceneend.cpp.o.d"
-  "/Users/liwenchao/Downloads/game01/src/scenemain.cpp" "CMakeFiles/game01-Darwin.dir/src/scenemain.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/scenemain.cpp.o.d"
-  "/Users/liwenchao/Downloads/game01/src/scenetitle.cpp" "CMakeFiles/game01-Darwin.dir/src/scenetitle.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/scenetitle.cpp.o.d"
+  "/Users/liwenchao/Documents/game01/src/Game.cpp" "CMakeFiles/game01-Darwin.dir/src/Game.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/Game.cpp.o.d"
+  "/Users/liwenchao/Documents/game01/src/main.cpp" "CMakeFiles/game01-Darwin.dir/src/main.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/main.cpp.o.d"
+  "/Users/liwenchao/Documents/game01/src/scene.cpp" "CMakeFiles/game01-Darwin.dir/src/scene.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/scene.cpp.o.d"
+  "/Users/liwenchao/Documents/game01/src/sceneend.cpp" "CMakeFiles/game01-Darwin.dir/src/sceneend.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/sceneend.cpp.o.d"
+  "/Users/liwenchao/Documents/game01/src/scenemain.cpp" "CMakeFiles/game01-Darwin.dir/src/scenemain.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/scenemain.cpp.o.d"
+  "/Users/liwenchao/Documents/game01/src/scenetitle.cpp" "CMakeFiles/game01-Darwin.dir/src/scenetitle.cpp.o" "gcc" "CMakeFiles/game01-Darwin.dir/src/scenetitle.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

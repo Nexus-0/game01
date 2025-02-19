@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/Users/liwenchao/Downloads/game01/game01-Darwin"
-  "/Users/liwenchao/Downloads/game01/game01-Darwin.pdb"
+  "/Users/liwenchao/Documents/game01/game01-Darwin"
+  "/Users/liwenchao/Documents/game01/game01-Darwin.pdb"
   "CMakeFiles/game01-Darwin.dir/src/Game.cpp.o"
   "CMakeFiles/game01-Darwin.dir/src/Game.cpp.o.d"
   "CMakeFiles/game01-Darwin.dir/src/main.cpp.o"

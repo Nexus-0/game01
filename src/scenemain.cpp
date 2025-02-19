@@ -93,9 +93,10 @@ void SceneMain::update(float deltaTime)
     updatePlayer(deltaTime);
     updateExplosion();
     updateItems(deltaTime);
-
+    if(isAlive == false){
+        changeSceneDelayed(deltaTime,3);
+    };
 }
-
 void SceneMain::render()
 {
     //渲染玩家子弹
@@ -315,6 +316,7 @@ void SceneMain::updatePlayer(float deltaTime)
         explosion->startTime = currentTime;
         explosions.push_back(explosion);
         Mix_PlayChannel(-1, sounds["player_explosion"], 0);
+        game.setFinalScore(score);
     
         return;
 
@@ -401,6 +403,16 @@ void SceneMain::spawnEnemy()
     enemy->position.x = dis(gen)*(game.getWindowWidth() - enemy->width);
     enemy->position.y = -enemy->height ;
     this->enemies.push_back(enemy);
+}
+
+void SceneMain::changeSceneDelayed(float deltaTime, float delay)
+{
+    timer += deltaTime;
+    if(timer > delay){ 
+        auto sceneEnd = new SceneEnd();
+        game.changeScene(sceneEnd);
+        
+    }
 }
 
 void SceneMain::updateEnemies(float deltaTime)

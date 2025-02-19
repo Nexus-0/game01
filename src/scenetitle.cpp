@@ -27,7 +27,7 @@ void SceneTitle::render()
     game.renderTextCentered(titleText, 0.4f, true);
     //渲染提示文字
     if(timer < 0.5f){
-        std::string tipText = "按任意键开始游戏";
+        std::string tipText = "按J键开始游戏";
         game.renderTextCentered(tipText, 0.8f, false);
         return;
     }
@@ -43,7 +43,7 @@ void SceneTitle::clean()
 void SceneTitle::handleEvent(SDL_Event *event)
 {
     if(event->type == SDL_KEYDOWN){
-        if(event->key.keysym.scancode != SDL_SCANCODE_UNKNOWN && event->key.keysym.scancode != SDL_SCANCODE_ESCAPE){
+        if(event->key.keysym.scancode == SDL_SCANCODE_J){
             auto mainScene = new SceneMain();
             game.changeScene(mainScene);
         }

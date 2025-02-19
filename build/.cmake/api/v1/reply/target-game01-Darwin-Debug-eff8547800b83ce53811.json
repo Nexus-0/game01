@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/Users/liwenchao/Downloads/game01/game01-Darwin"
+			"path" : "/Users/liwenchao/Documents/game01/game01-Darwin"
 		}
 	],
 	"backtrace" : 1,
@@ -79,7 +79,7 @@
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
-					"path" : "/opt/homebrew/Cellar/sdl2_mixer/2.8.1/include/SDL2"
+					"path" : "/opt/homebrew/Cellar/sdl2_mixer/2.8.0/include/SDL2"
 				},
 				{
 					"backtrace" : 2,
@@ -141,7 +141,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/sdl2_mixer/2.8.1/lib/libSDL2_mixer.dylib",
+				"fragment" : "/opt/homebrew/Cellar/sdl2_mixer/2.8.0/lib/libSDL2_mixer.dylib",
 				"role" : "libraries"
 			},
 			{

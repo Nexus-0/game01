@@ -1,7 +1,7 @@
 CMakeFiles/game01-Darwin.dir/src/Game.cpp.o: \
-  /Users/liwenchao/Downloads/game01/src/Game.cpp \
-  /Users/liwenchao/Downloads/game01/src/game.h \
-  /Users/liwenchao/Downloads/game01/src/scene.h \
+  /Users/liwenchao/Documents/game01/src/Game.cpp \
+  /Users/liwenchao/Documents/game01/src/game.h \
+  /Users/liwenchao/Documents/game01/src/scene.h \
   /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2/SDL.h \
   /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2/SDL_main.h \
   /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2/SDL_stdinc.h \
@@ -384,9 +384,9 @@ CMakeFiles/game01-Darwin.dir/src/Game.cpp.o: \
   /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2/SDL_version.h \
   /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2/SDL_locale.h \
   /opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2/SDL_misc.h \
-  /Users/liwenchao/Downloads/game01/src/object.h \
+  /Users/liwenchao/Documents/game01/src/object.h \
   /opt/homebrew/Cellar/sdl2_image/2.8.4/include/SDL2/SDL_image.h \
-  /opt/homebrew/Cellar/sdl2_mixer/2.8.1/include/SDL2/SDL_mixer.h \
+  /opt/homebrew/Cellar/sdl2_mixer/2.8.0/include/SDL2/SDL_mixer.h \
   /opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2/SDL_ttf.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/max.h \
@@ -903,7 +903,7 @@ CMakeFiles/game01-Darwin.dir/src/Game.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__bit/byteswap.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__bit/endian.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__bit/has_single_bit.h \
-  /Users/liwenchao/Downloads/game01/src/scenemain.h \
+  /Users/liwenchao/Documents/game01/src/scenemain.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/list \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/functional \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__functional/binary_negate.h \
@@ -1048,4 +1048,4 @@ CMakeFiles/game01-Darwin.dir/src/Game.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__random/weibull_distribution.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__tree \
-  /Users/liwenchao/Downloads/game01/src/scenetitle.h
+  /Users/liwenchao/Documents/game01/src/scenetitle.h

@@ -1,5 +1,6 @@
 #ifndef    SCENEEND_H
 #define     SCENEEND_H
+
 #include "scene.h"
 #include "object.h"
 #include<string>
@@ -11,14 +12,19 @@ class Game;
 class SceneEnd : public Scene
 {
 public:
-    SceneEnd(Game& game);
-    ~SceneEnd();
+    
     void init() override;
     void update(float deltaTime) override;
     void render() override;
     void clean() override;
     void handleEvent(SDL_Event* event) override;
 private:
+    bool isTyping = true;
+    std::string name = "";
+
+     void renderPhase1();
+     void renderPhase2();
+    void removeLastUTF8Char(std::string& str);
     Mix_Music* bgm;
     std::string scoreText;
     std::string highScoreText;
