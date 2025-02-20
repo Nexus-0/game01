@@ -66,13 +66,14 @@ void SceneMain::init()
     //初始化敌人子弹
     enemyProjectileTemplate.texture = IMG_LoadTexture(game.getRenderer(), "../../assets/image/bullet-1.png");
     SDL_QueryTexture(enemyProjectileTemplate.texture, NULL, NULL, &enemyProjectileTemplate.width, &enemyProjectileTemplate.height);
-    enemyProjectileTemplate.width /= 4;
-    enemyProjectileTemplate.height /= 4; 
+    enemyProjectileTemplate.width /= 2;
+    enemyProjectileTemplate.height /= 2; 
     
     //初始化爆炸
     explosionTemplate.texture = IMG_LoadTexture(game.getRenderer(), "/Users/liwenchao/Downloads/game01/assets/effect/explosion.png");
     SDL_QueryTexture(explosionTemplate.texture, NULL, NULL, &explosionTemplate.width, &explosionTemplate.height);
     explosionTemplate.totalFrame = explosionTemplate.width / explosionTemplate.height;
+    explosionTemplate.height *= 2;
     explosionTemplate.width = explosionTemplate.height;   
 
     //初始化道具
@@ -572,7 +573,7 @@ void SceneMain::renderExplosions()
 {
     for (auto explosion : explosions)
     {
-         SDL_Rect src = {explosion->currentFrame * explosion->width, 0, explosion->width, explosion->height};
+         SDL_Rect src = {explosion->currentFrame * explosion->width, 0, explosion->width/2, explosion->height/2};
          SDL_Rect dst = {   static_cast<int>(explosion->position.x), 
                             static_cast<int>(explosion->position.y), 
                             explosion->width, 
@@ -589,7 +590,7 @@ void SceneMain::dropItem(Enemy *enemy)
     item->position.y = enemy->position.y +enemy->height/2 - item->height/2;
     float angle =dis(gen)*2*M_PI;
     item->direction.x = cos(angle);
-    item->direction.y = sin(angle);
+    item->direction.y = sin(angle); 
     items.push_back(item);
 }
 

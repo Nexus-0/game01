@@ -51,6 +51,7 @@ private:
     TTF_Font* textFont;
 
     bool isRunning = true;//游戏是否运行
+    bool isFullScreen = false;//是否全屏
     Scene* currentScene = nullptr;//当前场景
     SDL_Window* window = nullptr;//窗口
     SDL_Renderer* renderer = nullptr;//渲染器
