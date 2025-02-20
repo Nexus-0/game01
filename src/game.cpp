@@ -6,6 +6,7 @@
 #include <SDL_image.h>
 #include <SDL_mixer.h>
 #include <SDL_ttf.h>
+#include <fstream>
 
 Game::Game()
 {
@@ -13,6 +14,7 @@ Game::Game()
 
 Game::~Game()
 {
+    saveData();
     clean();
 }
 
@@ -84,7 +86,10 @@ void Game::init()
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL_Init Error: %s\n", Mix_GetError());
         isRunning = false;
     }
+    //加载数据
+    loadData();
 
+    //分配音频通道
     Mix_AllocateChannels(32);
 
     //设置音量
@@ -215,29 +220,28 @@ SDL_Point Game::renderTextCentered(std::string text, float posY, bool isTitle)
                         textSurface->w,
                         textSurface->h};
    
-    SDL_RenderCopy(getRenderer(), textTexture, NULL, &textRect); 
+    SDL_RenderCopy(renderer, textTexture, NULL, &textRect); 
     SDL_DestroyTexture(textTexture);
     SDL_FreeSurface(textSurface);
     return{textRect.x+textRect.w,y};
 }
 
-void Game::renderTextPos(std::string text, float posX, float posY, bool isTitle)
+void Game::renderTextPos(std::string text, float posX, float posY, bool isLeft)
 {   
     SDL_Color color = {255, 255, 255, 255};
-    SDL_Surface *textSurface;
-    if(isTitle){
-        textSurface = TTF_RenderUTF8_Solid(titleFont, text.c_str(), color);
-    }else{
-        textSurface = TTF_RenderUTF8_Solid(textFont, text.c_str(), color);
-    }
+    SDL_Surface *textSurface = TTF_RenderUTF8_Solid(textFont, text.c_str(), color);
     SDL_Texture* textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
-    SDL_Rect textRect = {static_cast<int>(posX),
-                        static_cast<int>(posY),
-                        textSurface->w,
-                        textSurface->h};    
-    SDL_RenderCopy(getRenderer(), textTexture, NULL, &textRect); 
+    SDL_Rect textRect ;  
+    if(isLeft){
+        textRect= {static_cast<int>(posX), static_cast<int>(posY), textSurface->w, textSurface->h}; 
+        
+    }else{
+        textRect = {getWindowWidth() - static_cast<int>(posX)- textSurface->w, static_cast<int>(posY), textSurface->w, textSurface->h};
+    }
+    
+    SDL_RenderCopy(renderer, textTexture, NULL, &textRect); 
     SDL_DestroyTexture(textTexture);
-    SDL_FreeSurface(textSurface);   
+    SDL_FreeSurface(textSurface);
 }
 
 void Game::backgroundUpdate(float deltaTime)
@@ -277,4 +281,42 @@ void Game::renderBackground()
         
     }
         
+}
+
+void Game::saveData()
+{
+    std::ofstream file("../../assets/save.dat");
+    if(!file.is_open()){
+        SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "无法打开文件");
+        return;
+    }
+    for (const auto &entry : leaderBoard)
+    {
+        file << entry.first << " " << entry.second << std::endl;
+    }
+    file.close();
+}
+
+void Game::loadData()
+{
+    std::ifstream file("../../assets/save.dat");
+    if(!file.is_open()){
+        SDL_Log("无法打开文件");
+        return;
+    }
+    leaderBoard.clear();
+    int score;
+    std::string name;
+    while (file >> score >> name)
+    {
+        leaderBoard.insert({score, name});
+    }
+}
+
+void Game::insertLeaderBoard(int score, std::string name)
+{
+    leaderBoard.insert({score,name});
+    if(leaderBoard.size() > 8){
+        leaderBoard.erase(--leaderBoard.end());
+    }
 }

@@ -43,7 +43,10 @@ void SceneEnd::render()
 
 void SceneEnd::clean()
 {
-    Mix_FreeMusic(bgm);
+    if(bgm != nullptr){
+        Mix_HaltMusic();
+        Mix_FreeMusic(bgm);
+    }
 }
 
 void SceneEnd::handleEvent(SDL_Event *event)
@@ -61,20 +64,27 @@ void SceneEnd::handleEvent(SDL_Event *event)
                 if(name == ""){
                     name = "佚名";
                 }
+                game.insertLeaderBoard(game.getFinalScore(), name);
             }
+            if(event->type == SDL_KEYDOWN){
+                if(event->key.keysym.scancode == SDL_SCANCODE_BACKSPACE){
+                    removeLastUTF8Char(name);
+                }
+            }
+        
         }
-        if(event->type == SDL_KEYDOWN){
-            if(event->key.keysym.scancode == SDL_SCANCODE_BACKSPACE){
-                removeLastUTF8Char(name);
-            }
-        }
-
-    else{
-   
-            }
+        
     }
+    else{
+            if(event->type == SDL_KEYDOWN){
+                if(event->key.keysym.scancode == SDL_SCANCODE_J){
+                    auto titleScene = new SceneTitle();
+                    game.changeScene(titleScene);
+                }
+            }
+        }
 }
-void SceneEnd::renderPhase1()
+void SceneEnd::renderPhase1()//渲染游戏结束
 {
     
     auto score = game.getFinalScore(); 
@@ -89,7 +99,7 @@ void SceneEnd::renderPhase1()
        SDL_Point nameText = game.renderTextCentered(name, 0.8f, false);
        
        if(blinkTimer < 0.5f){
-        game.renderTextPos("_",nameText.x, nameText.y, false);
+        game.renderTextPos("_",nameText.x, nameText.y);
        }
        
        
@@ -97,12 +107,27 @@ void SceneEnd::renderPhase1()
     else{
         if(blinkTimer < 0.5f){
         game.renderTextCentered("_",0.8,false);
-    }
+        }
     }
 }
 
-void SceneEnd::renderPhase2()
+void SceneEnd::renderPhase2()//渲染得分榜
 {
+    game.renderTextCentered("得分榜",0.05,true);
+    auto posY=0.2 * game.getWindowHeight();    
+    auto i=1;
+    for(auto item:game.getLeaderBoard()){
+        std::string name = std::to_string(i)+". "+item.second;
+        std::string score = std::to_string(item.first);
+        game.renderTextPos(name,100, posY);
+        game.renderTextPos(score,100, posY,false);
+        posY += 50;
+        i++;
+    }
+    if(blinkTimer < 0.5f){
+        
+        game.renderTextCentered("按J键返回标题",0.9,false);
+    }
 }
 
 void SceneEnd::removeLastUTF8Char(std::string& str)

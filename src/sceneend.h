@@ -19,21 +19,17 @@ public:
     void clean() override;
     void handleEvent(SDL_Event* event) override;
 private:
-    bool isTyping = true;
-    std::string name = "";
-    float blinkTimer = 1.0f;
+    bool isTyping = true;//是否正在输入
+    std::string name = "";//输入的名字
+    float blinkTimer = 1.0f;//闪烁时间
 
-     void renderPhase1();
-     void renderPhase2();
-    void removeLastUTF8Char(std::string& str);
+     void renderPhase1();//渲染游戏结束
+     void renderPhase2();//渲染得分榜
+    void removeLastUTF8Char(std::string& str);//移除最后一个UTF-8字符
     Mix_Music* bgm;
     std::string scoreText;
     std::string highScoreText;
-    SDL_Texture* bgTexture = nullptr;
-    SDL_Texture* scoreTexture = nullptr;
-    SDL_Texture* highScoreTexture = nullptr;
-    SDL_Texture* endTexture = nullptr;
-    Mix_Chunk* endSound = nullptr;  
+    
 };
 
 #endif
