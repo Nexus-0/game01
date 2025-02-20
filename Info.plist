@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>Game01</string>
+    <!-- 应用程序 -->
+    <key>CFBundleDisplayName</key>
+    <string>Game01</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.example.game01</string>
+    <key>CFBundleVersion</key>
+    <string>0.1</string>
+    <key>CFBundleExecutable</key>
+    <string>Game01</string>
+</dict>
+</plist>

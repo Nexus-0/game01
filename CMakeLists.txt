@@ -21,11 +21,16 @@ find_package(SDL2 REQUIRED)
 find_package(SDL2_image REQUIRED)
 find_package(SDL2_mixer REQUIRED)
 find_package(SDL2_ttf REQUIRED)
-#添加头文件
+
+# 设置 macOS 应用程序包
+set(CMAKE_MACOSX_BUNDLE TRUE)
+set(MACOSX_BUNDLE_ICON_FILE "AppIcon.icns")
+set(MACOSX_BUNDLE_INFO_PLIST_FILE "${CMAKE_SOURCE_DIR}/Info.plist")
 
 #添加可执行文件
 add_executable(
             ${TARGET} 
+            MACOSX_BUNDLE
             "src/main.cpp"
             "src/Game.cpp"
             "src/scene.cpp"
@@ -41,3 +46,5 @@ target_link_libraries(${TARGET}
                         SDL2_mixer::SDL2_mixer
                         SDL2_ttf::SDL2_ttf
                         )
+# 将资源文件夹复制到 .app 包中
+file(COPY ${CMAKE_SOURCE_DIR}/assets DESTINATION ${CMAKE_BINARY_DIR}/${PROJECT_NAME}-${CMAKE_SYSTEM_NAME}.app/Contents/Resources)
