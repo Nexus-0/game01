@@ -249,19 +249,19 @@ void SceneMain::keybordControl(float deltaTime)
     }
    auto keyboardState = SDL_GetKeyboardState(NULL);
    //移动控制
-   if (keyboardState[SDL_SCANCODE_UP])
+   if (keyboardState[SDL_SCANCODE_W])
    {
         player1.position.y -= deltaTime*player1.speed;
    }
-   if (keyboardState[SDL_SCANCODE_DOWN])
+   if (keyboardState[SDL_SCANCODE_S])
    {
         player1.position.y += deltaTime*player1.speed;
    }
-   if (keyboardState[SDL_SCANCODE_LEFT])
+   if (keyboardState[SDL_SCANCODE_A])
    {
         player1.position.x -= deltaTime*player1.speed;
    }
-   if (keyboardState[SDL_SCANCODE_RIGHT])
+   if (keyboardState[SDL_SCANCODE_D])
    {
         player1.position.x += deltaTime*player1.speed;
    }
