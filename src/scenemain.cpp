@@ -16,34 +16,34 @@ SceneMain::~SceneMain()
 void SceneMain::init()
 {
     //加载背景音乐
-    bgm = Mix_LoadMUS("../../assets/music/03_Racing_Through_Asteroids_Loop.ogg");
+    bgm = Mix_LoadMUS("assets/music/03_Racing_Through_Asteroids_Loop.ogg");
     if(bgm == nullptr){
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL_Init Error: %s\n", SDL_GetError());
     }
     Mix_PlayMusic(bgm, -1);
 
     //读取ui Health；
-    uiHealth = IMG_LoadTexture(game.getRenderer(), "../../assets/image/Health UI Black.png");
+    uiHealth = IMG_LoadTexture(game.getRenderer(), "assets/image/Health UI Black.png");
     //随机数
     std::random_device rd;
     gen = std::mt19937(rd()); 
     dis = std::uniform_real_distribution<float>(0.0f,1.0f);
 
-    scoreFont = TTF_OpenFont("../../assets/font/VonwaonBitmap-12px.ttf", 24);
+    scoreFont = TTF_OpenFont("assets/font/VonwaonBitmap-12px.ttf", 24);
 
 
     //读取音效
-    sounds["player_shoot"] = Mix_LoadWAV("../../assets/sound/laser_shoot4.wav");
-    sounds["enemy_shoot"] = Mix_LoadWAV("../../assets/sound/xs_laser.wav");
-    sounds["player_explosion"] = Mix_LoadWAV("../../assets/sound/explosion1.wav");
-    sounds["enemy_explosion"] = Mix_LoadWAV("../../assets/sound/explosion3.wav");
-    sounds["get_item"] = Mix_LoadWAV("../../assets/sound/eff5.wav");
-    sounds["hit"] = Mix_LoadWAV("../../assets/sound/eff11.wav");
+    sounds["player_shoot"] = Mix_LoadWAV("assets/sound/laser_shoot4.wav");
+    sounds["enemy_shoot"] = Mix_LoadWAV("assets/sound/xs_laser.wav");
+    sounds["player_explosion"] = Mix_LoadWAV("assets/sound/explosion1.wav");
+    sounds["enemy_explosion"] = Mix_LoadWAV("assets/sound/explosion3.wav");
+    sounds["get_item"] = Mix_LoadWAV("assets/sound/eff5.wav");
+    sounds["hit"] = Mix_LoadWAV("assets/sound/eff11.wav");
     
 
 
     //初始化玩家
-    player1.texture = IMG_LoadTexture(game.getRenderer(), "../../assets/image/SpaceShip.png");
+    player1.texture = IMG_LoadTexture(game.getRenderer(), "assets/image/SpaceShip.png");
     SDL_QueryTexture(player1.texture, NULL, NULL, &player1.width, &player1.height);
     player1.width /= 4;
     player1.height /= 4;
@@ -52,32 +52,32 @@ void SceneMain::init()
 
     //初始化子弹
 
-    playerProjectileTemplate.texture = IMG_LoadTexture(game.getRenderer(), "../../assets/image/laser-1.png");
+    playerProjectileTemplate.texture = IMG_LoadTexture(game.getRenderer(), "assets/image/laser-1.png");
     SDL_QueryTexture(playerProjectileTemplate.texture, NULL, NULL, &playerProjectileTemplate.width, &playerProjectileTemplate.height);
     playerProjectileTemplate.width /= 4;
     playerProjectileTemplate.height /= 4;
 
     //初始化敌人
-    enemyTemplate.texture = IMG_LoadTexture(game.getRenderer(), "../../assets/image/insect-2.png");
+    enemyTemplate.texture = IMG_LoadTexture(game.getRenderer(), "assets/image/insect-2.png");
     SDL_QueryTexture(enemyTemplate.texture, NULL, NULL, &enemyTemplate.width, &enemyTemplate.height);
     enemyTemplate.width /= 4;
     enemyTemplate.height /= 4;
 
     //初始化敌人子弹
-    enemyProjectileTemplate.texture = IMG_LoadTexture(game.getRenderer(), "../../assets/image/bullet-1.png");
+    enemyProjectileTemplate.texture = IMG_LoadTexture(game.getRenderer(), "assets/image/bullet-1.png");
     SDL_QueryTexture(enemyProjectileTemplate.texture, NULL, NULL, &enemyProjectileTemplate.width, &enemyProjectileTemplate.height);
     enemyProjectileTemplate.width /= 2;
     enemyProjectileTemplate.height /= 2; 
     
     //初始化爆炸
-    explosionTemplate.texture = IMG_LoadTexture(game.getRenderer(), "/Users/liwenchao/Downloads/game01/assets/effect/explosion.png");
+    explosionTemplate.texture = IMG_LoadTexture(game.getRenderer(), "assets/effect/explosion.png");
     SDL_QueryTexture(explosionTemplate.texture, NULL, NULL, &explosionTemplate.width, &explosionTemplate.height);
     explosionTemplate.totalFrame = explosionTemplate.width / explosionTemplate.height;
     explosionTemplate.height *= 2;
     explosionTemplate.width = explosionTemplate.height;   
 
     //初始化道具
-    itemLifeTemplate.texture = IMG_LoadTexture(game.getRenderer(), "../../assets/image/bonus_life.png");
+    itemLifeTemplate.texture = IMG_LoadTexture(game.getRenderer(), "assets/image/bonus_life.png");
     SDL_QueryTexture(itemLifeTemplate.texture, NULL, NULL, &itemLifeTemplate.width, &itemLifeTemplate.height);
     itemLifeTemplate.width /= 4;
     itemLifeTemplate.height /= 4;

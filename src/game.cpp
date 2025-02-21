@@ -103,7 +103,7 @@ void Game::init()
         isRunning = false;
     }
     //初始化背景卷轴
-    nearSight.texture = IMG_LoadTexture(renderer, "../../assets/image/Stars-A.png");
+    nearSight.texture = IMG_LoadTexture(renderer, "assets/image/Stars-A.png");
     if(nearSight.texture == nullptr){
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL_Init Error: %s\n", SDL_GetError());
         isRunning = false;
@@ -112,7 +112,7 @@ void Game::init()
     nearSight.height /=2;
     nearSight.width /=2;
 
-    farSight.texture = IMG_LoadTexture(renderer, "../../assets/image/Stars-B.png");
+    farSight.texture = IMG_LoadTexture(renderer, "assets/image/Stars-B.png");
     if(farSight.texture == nullptr){
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL_Init Error: %s\n", SDL_GetError());
         isRunning = false;  
@@ -124,8 +124,8 @@ void Game::init()
    
 
     //载入字体  
-    titleFont = TTF_OpenFont("../../assets/font/VonwaonBitmap-16px.ttf", 64);
-    textFont = TTF_OpenFont("../../assets/font/VonwaonBitmap-16px.ttf", 32);
+    titleFont = TTF_OpenFont("assets/font/VonwaonBitmap-16px.ttf", 64);
+    textFont = TTF_OpenFont("assets/font/VonwaonBitmap-16px.ttf", 32);
     if(titleFont == nullptr || textFont == nullptr){
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL_Init Error: %s\n", SDL_GetError());
         isRunning = false;
@@ -295,7 +295,7 @@ void Game::renderBackground()
 
 void Game::saveData()
 {
-    std::ofstream file("../../assets/save.dat");
+    std::ofstream file("save.dat");
     if(!file.is_open()){
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "无法打开文件");
         return;
@@ -309,7 +309,7 @@ void Game::saveData()
 
 void Game::loadData()
 {
-    std::ifstream file("../../assets/save.dat");
+    std::ifstream file("save.dat");
     if(!file.is_open()){
         SDL_Log("无法打开文件");
         return;

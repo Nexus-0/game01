@@ -5,7 +5,7 @@
 
 void SceneTitle::init()
 {
-    bgm= Mix_LoadMUS("../../assets/music/06_Battle_in_Space_Intro.ogg");
+    bgm= Mix_LoadMUS("assets/music/06_Battle_in_Space_Intro.ogg");
     if(bgm == nullptr){
         SDL_LogError(SDL_LOG_CATEGORY_APPLICATION, "SDL_Init Error: %s\n", SDL_GetError());
     }
