@@ -6,7 +6,7 @@
                 "${workspaceFolder}/**",
                 "/opt/homebrew/Cellar/sdl2/2.30.12/include/SDL2",
                 "/opt/homebrew/Cellar/sdl2_image/2.8.4/include/SDL2",
-                "/opt/homebrew/Cellar/sdl2_mixer/2.8.1/include/SDL2",
+                "/opt/homebrew/Cellar/sdl2_mixer/2.8.0/include/SDL2",
                 "/opt/homebrew/Cellar/sdl2_ttf/2.24.0/include/SDL2"
             ],
             "defines": [],
